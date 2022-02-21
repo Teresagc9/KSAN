@@ -31,7 +31,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEKSANDIA-K02" NAME="PKSANCD0L03" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com" CC_DEST="alienware.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - PARQUET-INGESTA-refounded - %%$ODATE" MESSAGE="0087Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-krb-inm-customercontrelsp-01" ATTACH_SYSOUT="D" />
+                <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com" SUBJECT="Error en la ejecución del Job %%JOBNAME - %%$ODATE" MESSAGE="0000" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
     </FOLDER>
