@@ -37,7 +37,7 @@
             <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;DATIODATE&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
             <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecucion favor de alertar al aplicativo" DAYSOFFSET="0" />
             <INCOND NAME="PKSANCP0L03-TO-PKSANVP0GD5" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_LCVWTDAXAI01" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANVP0GD5-TO-PKSANCP0GD2" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="OK">
                 <DOFORCEJOB TABLE_NAME="CR-PEKSANDIA-K02" NAME="PKSANCP0GD2" ODATE="ODAT" REMOTE="N" />
@@ -195,7 +195,7 @@
             <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;REPROCESS_DATE&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
             <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecucion favor de alertar al aplicativo" DAYSOFFSET="0" />
             <INCOND NAME="PKSANCP0P02-TO-PKSANVP0GD6" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_LCVWTDAXAI01" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANVP0GD6-TO-PKSANCP0GD1" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="OK">
                 <DOFORCEJOB TABLE_NAME="CR-PEKSANDIA-K02" NAME="PKSANCP0GD1" ODATE="ODAT" REMOTE="N" />
@@ -331,7 +331,7 @@
             <VARIABLE NAME="%%UCM-JSONBODY" VALUE="{&quot;parameters&quot;:[{&quot;key&quot;:&quot;JOB_EXECUTION_NAMESPACE&quot;,&quot;value&quot;:&quot;%%NAMESPACE&quot;},{&quot;key&quot;:&quot;RUNTIME&quot;,&quot;value&quot;:&quot;DBUTILS&quot;},{&quot;key&quot;:&quot;UUAA&quot;,&quot;value&quot;:&quot;%%UUAA&quot;},{&quot;key&quot;:&quot;SH_EXEC_PARAMETERS&quot;,&quot;value&quot;:&quot;%%DBTYPE %%JNDI %%UUAA %%TABLE %%MODE %%FILE %%ENV&quot;},{&quot;key&quot;:&quot;SH_FILE_NAME&quot;,&quot;value&quot;:&quot;%%SHELL&quot;},{&quot;key&quot;:&quot;ALTERNATIVE_IMAGE&quot;,&quot;value&quot;:&quot;%%ALTERNATIVEIMAGE&quot;}]}" />
             <VARIABLE NAME="%%UCM-APP_NAME" VALUE="JOBAPX" />
             <VARIABLE NAME="%%UCM-ACCOUNT" VALUE="PE_PYLLS_DE" />
-            <QUANTITATIVE NAME="APX_DATIO_LCVWTDAXAI01" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <ON STMT="*" CODE="NOTOK">
                 <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="Job de Borrado de Contratos" ATTACH_SYSOUT="Y" />
             </ON>
@@ -367,7 +367,7 @@
             <VARIABLE NAME="%%UCM-APP_NAME" VALUE="JOBAPX" />
             <VARIABLE NAME="%%UCM-JSONBODY" VALUE="{&quot;parameters&quot;:[{&quot;key&quot;:&quot;JOB_EXECUTION_NAMESPACE&quot;,&quot;value&quot;:&quot;%%NAMESPACE&quot;},{&quot;key&quot;:&quot;RUNTIME&quot;,&quot;value&quot;:&quot;DBUTILS&quot;},{&quot;key&quot;:&quot;UUAA&quot;,&quot;value&quot;:&quot;%%UUAA&quot;},{&quot;key&quot;:&quot;SH_EXEC_PARAMETERS&quot;,&quot;value&quot;:&quot;%%DBTYPE %%JNDI %%UUAA %%TABLE %%MODE %%FILE %%ENV&quot;},{&quot;key&quot;:&quot;SH_FILE_NAME&quot;,&quot;value&quot;:&quot;%%SHELL&quot;},{&quot;key&quot;:&quot;ALTERNATIVE_IMAGE&quot;,&quot;value&quot;:&quot;%%ALTERNATIVEIMAGE&quot;}]}" />
             <VARIABLE NAME="%%UCM-ACCOUNT" VALUE="PE_PYLLS_DE" />
-            <QUANTITATIVE NAME="APX_DATIO_LCVWTDAXAI01" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <ON STMT="*" CODE="NOTOK">
                 <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="Job de borrado Intervinientes" ATTACH_SYSOUT="D" />
             </ON>
@@ -428,7 +428,7 @@
             <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;gf_cutoff_date&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
             <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecucion favor de alertar al aplicativo" DAYSOFFSET="0" />
             <INCOND NAME="PKSANCP0P03-TO-PKSANVP0GD7" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_LCVWTDAXAI01" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANVP0GD7-TO-PKSANCP0GD5" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="OK">
                 <DOFORCEJOB TABLE_NAME="CR-PEKSANDIA-K02" NAME="PKSANCP0CR1" ODATE="ODAT" REMOTE="N" />
