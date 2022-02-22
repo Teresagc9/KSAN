@@ -106,9 +106,6 @@
                 <DOFORCEJOB TABLE_NAME="CR-PESANDIA-T02" NAME="PSANCP0068" ODATE="ODAT" REMOTE="N" />
             </ON>
 			<ON STMT="*" CODE="OK">
-                <DOFORCEJOB TABLE_NAME="CR-PEKSANDIA-K02" NAME="PKSANCP0P02" ODATE="ODAT" REMOTE="N" />
-            </ON>	
-			<ON STMT="*" CODE="OK">
                 <DOFORCEJOB TABLE_NAME="CR-PEKSANDIA-K02" NAME="PKSANCD0P02" ODATE="ODAT" REMOTE="N" />
             </ON>	
             <ON STMT="*" CODE="NOTOK">
