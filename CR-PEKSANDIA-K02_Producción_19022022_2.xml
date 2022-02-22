@@ -10,7 +10,7 @@
             <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecución, alertar al aplicativo" DAYSOFFSET="0" />
             <INCOND NAME="PBTQCP0I21-TO-PKSANCP0L03" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PSANCP0H17-TO-PKSANCP0L03" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PBTQCP0I21-TO-PKSANCP0L03" ODATE="ODAT" SIGN="-" />
             <OUTCOND NAME="PSANCP0H17-TO-PKSANCP0L03" ODATE="ODAT" SIGN="-" />
             <OUTCOND NAME="PKSANCP0L03-TO-PKSANVP0GD2" ODATE="ODAT" SIGN="+" />
@@ -26,7 +26,7 @@
             <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;gf_cutoff_date&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
             <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecución, alertar al aplicativo" DAYSOFFSET="0" />
             <INCOND NAME="PKSANCP0L03-TO-PKSANVP0GD2" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANVP0GD2-TO-PKSANCP0GD2" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="NOTOK">
                 <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="Error en la ejecución del Job %%JOBNAME - %%$ODATE" MESSAGE="0000" ATTACH_SYSOUT="Y" />
@@ -39,7 +39,7 @@
             <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;DATIODATE&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
             <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecucion favor de alertar al aplicativo" DAYSOFFSET="0" />
             <INCOND NAME="PKSANCP0L03-TO-PKSANVP0GD5" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANVP0GD5-TO-PKSANCP0GD2" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="OK">
                 <DOFORCEJOB TABLE_NAME="CR-PEKSANDIA-K02" NAME="PKSANCP0GD2" ODATE="ODAT" REMOTE="N" />
@@ -57,7 +57,7 @@
             <INCOND NAME="PKSANVP0GD2-TO-PKSANCP0GD2" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PKSANVP0GD3-TO-PKSANCP0GD2" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PKSANVP0GD5-TO-PKSANCP0GD2" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANVP0GD2-TO-PKSANCP0GD2" ODATE="ODAT" SIGN="-" />
             <OUTCOND NAME="PKSANCP0GD2-TO-PKSANVP0GD4" ODATE="ODAT" SIGN="+" />
             <OUTCOND NAME="PKSANVP0GD3-TO-PKSANCP0GD2" ODATE="ODAT" SIGN="-" />
@@ -73,7 +73,7 @@
             <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;gf_cutoff_date&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
             <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecución, alertar al aplicativo" DAYSOFFSET="0" />
             <INCOND NAME="PKSANCP0GD2-TO-PKSANVP0GD4" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANVP0GD4-TO-PKUSUCP0GD1" ODATE="ODAT" SIGN="+" />
             <OUTCOND NAME="PKSANVP0GD4-TO-PKSANNP0GD1" ODATE="ODAT" SIGN="+" />
             <OUTCOND NAME="PKSANVP0GD4-TO-PKSANCP0GD7" ODATE="ODAT" SIGN="+" />
@@ -89,7 +89,7 @@
             <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;gf_cutoff_date&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
             <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecución, alertar al aplicativo" DAYSOFFSET="0" />
             <INCOND NAME="PKSANVP0GD4-TO-PKSANCP0GD7" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANCP0GD7-TO-PKSANTP0GD2" ODATE="ODAT" SIGN="+" />
             <OUTCOND NAME="PKSANVP0GD4-TO-PKSANCP0GD7" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
@@ -103,7 +103,7 @@
             <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;gf_cutoff_date&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
             <INCOND NAME="PKSANTP0GD4-TO-PKSANCP0GD8" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PKSANNP0GD1-TO-PKSANCP0GD8" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANCP0GD8-TO-PKSANDP0GD1" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="NOTOK">
                 <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="KSAN Ejecución fallida del job %%JOBNAME - Odate %%$ODATE" MESSAGE="0069Ha fallado el proceso %%JOBNAME con Odate %%$ODATE, favor de validar." ATTACH_SYSOUT="Y" />
@@ -130,7 +130,7 @@
             <VARIABLE NAME="%%UCM-APXJOB" VALUE="KSANJ002-01-ZZ" />
             <VARIABLE NAME="%%UCM-ACCOUNT" VALUE="PE_PYLLS_DE" />
             <INCOND NAME="PKSANTP0GD2-TO-PKSANCP0GX2" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANCP0GX2-TO-PKSANTP0GD4" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="NOTOK">
                 <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="KSAN Ejecución fallida del job %%JOBNAME - Odate %%$ODATE" MESSAGE="0069Ha fallado el proceso %%JOBNAME con Odate %%$ODATE, favor de validar." ATTACH_SYSOUT="Y" />
@@ -167,7 +167,7 @@
             <INCOND NAME="PSANCP0H17-TO-PKSANCP0P02" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PSANCP0H41-TO-PKSANCP0P02" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PSANVP0117-TO-PKSANCP0P02" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PSANCP0067-TO-PKSANCP0P02" ODATE="ODAT" SIGN="-" />
             <OUTCOND NAME="PSANVP0012-TO-PKSANCP0P02" ODATE="ODAT" SIGN="-" />
             <OUTCOND NAME="PSANCP0H17-TO-PKSANCP0P02" ODATE="ODAT" SIGN="-" />
@@ -189,7 +189,7 @@
             <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;gf_cutoff_date&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
             <SHOUT WHEN="LATESUB" TIME="0400" URGENCY="U" DEST="EM" MESSAGE="Favor de alertar a Xavier Zamora &lt;xavier.zamora@bbva.com&gt; ya que este job debió ejecutar antes de las 4:00 AM." DAYSOFFSET="0" />
             <INCOND NAME="PKSANCP0P02-TO-PKSANVP0GD1" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANVP0GD1-TO-PKSANCP0GD1" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="NOTOK">
                 <DOMAIL URGENCY="U" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="KSAN Ejecución fallida del job %%JOBNAME - Odate %%$ODATE" MESSAGE="0069Ha fallado el proceso %%JOBNAME con Odate %%$ODATE, favor de validar." ATTACH_SYSOUT="Y" />
@@ -202,7 +202,7 @@
             <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;REPROCESS_DATE&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
             <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecucion favor de alertar al aplicativo" DAYSOFFSET="0" />
             <INCOND NAME="PKSANCP0P02-TO-PKSANVP0GD6" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANVP0GD6-TO-PKSANCP0GD1" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="OK">
                 <DOFORCEJOB TABLE_NAME="CR-PEKSANDIA-K02" NAME="PKSANCP0GD1" ODATE="ODAT" REMOTE="N" />
@@ -218,7 +218,7 @@
             <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;gf_cutoff_date&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
             <INCOND NAME="PKSANVP0GD6-TO-PKSANCP0GD1" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PKSANVP0GD1-TO-PKSANCP0GD1" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANCP0GD1-TO-PKSANVP0GD3" ODATE="ODAT" SIGN="+" />
             <OUTCOND NAME="PKSANVP0GD1-TO-PKSANCP0GD1" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
@@ -231,7 +231,7 @@
             <VARIABLE NAME="%%SENTRY_OPT" VALUE="-b" />
             <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;gf_cutoff_date&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
             <INCOND NAME="PKSANCP0GD1-TO-PKSANVP0GD3" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANVP0GD3-TO-PKSANCP0GD3" ODATE="ODAT" SIGN="+" />
             <OUTCOND NAME="PKSANVP0GD3-TO-PKUSUCP0GD1" ODATE="ODAT" SIGN="+" />
             <OUTCOND NAME="PKSANVP0GD3-TO-PKSANCP0GD2" ODATE="ODAT" SIGN="+" />
@@ -255,7 +255,7 @@
             <VARIABLE NAME="%%UCM-ACCOUNT" VALUE="PE_DAAS" />
             <INCOND NAME="PKSANTP0GD3-TO-PKSANCP0GD7" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PKSANNP0GD1-TO-PKSANCP0GD7" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANCP0GD7-TO-PKSANDP0GD1" ODATE="ODAT" SIGN="+" />
             <OUTCOND NAME="PKSANNP0GD1-TO-PKSANCP0GD7" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
@@ -294,7 +294,7 @@
             <VARIABLE NAME="%%UCM-APXJOB" VALUE="KSANJ001-01-ZZ" />
             <VARIABLE NAME="%%UCM-ACCOUNT" VALUE="PE_PYLLS_DE" />
             <INCOND NAME="PKSANTP0GD1-TO-PKSANCP0GX1" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="INITNOLINEA" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANCP0GX1-TO-PKSANTP0GD3" ODATE="ODAT" SIGN="+" />
             <OUTCOND NAME="PKSANTP0GD1-TO-PKSANCP0GX1" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
@@ -317,7 +317,7 @@
             <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;gf_cutoff_date&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
             <INCOND NAME="PKSANVP0GD6-TO-PKSANCP0GD3" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PKSANVP0GD3-TO-PKSANCP0GD3" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANCP0GD3-TO-PKSANTP0GD1" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="NOTOK">
                 <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="KSAN Ejecución fallida del job %%JOBNAME - Odate %%$ODATE" ATTACH_SYSOUT="D" />
@@ -338,7 +338,7 @@
             <VARIABLE NAME="%%UCM-JSONBODY" VALUE="{&quot;parameters&quot;:[{&quot;key&quot;:&quot;JOB_EXECUTION_NAMESPACE&quot;,&quot;value&quot;:&quot;%%NAMESPACE&quot;},{&quot;key&quot;:&quot;RUNTIME&quot;,&quot;value&quot;:&quot;DBUTILS&quot;},{&quot;key&quot;:&quot;UUAA&quot;,&quot;value&quot;:&quot;%%UUAA&quot;},{&quot;key&quot;:&quot;SH_EXEC_PARAMETERS&quot;,&quot;value&quot;:&quot;%%DBTYPE %%JNDI %%UUAA %%TABLE %%MODE %%FILE %%ENV&quot;},{&quot;key&quot;:&quot;SH_FILE_NAME&quot;,&quot;value&quot;:&quot;%%SHELL&quot;},{&quot;key&quot;:&quot;ALTERNATIVE_IMAGE&quot;,&quot;value&quot;:&quot;%%ALTERNATIVEIMAGE&quot;}]}" />
             <VARIABLE NAME="%%UCM-APP_NAME" VALUE="JOBAPX" />
             <VARIABLE NAME="%%UCM-ACCOUNT" VALUE="PE_PYLLS_DE" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <ON STMT="*" CODE="NOTOK">
                 <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="Job de Borrado de Contratos" ATTACH_SYSOUT="Y" />
             </ON>
@@ -352,7 +352,7 @@
             <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;operation&quot;:&quot;%%OPERATION&quot;,&quot;sourcePath&quot;:&quot;%%RUTA&quot;,&quot;failIfFileNotFound&quot;:&quot;%%FAIL&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
             <INCOND NAME="PKSANCP0GD7-TO-PKSANDP0GD1" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PKSANCP0GD8-TO-PKSANDP0GD1" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANDP0GD1-TO-PKSANDP0GD2" ODATE="ODAT" SIGN="+" />
             <OUTCOND NAME="PKSANCP0GD8-TO-PKSANDP0GD1" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
@@ -374,7 +374,7 @@
             <VARIABLE NAME="%%UCM-APP_NAME" VALUE="JOBAPX" />
             <VARIABLE NAME="%%UCM-JSONBODY" VALUE="{&quot;parameters&quot;:[{&quot;key&quot;:&quot;JOB_EXECUTION_NAMESPACE&quot;,&quot;value&quot;:&quot;%%NAMESPACE&quot;},{&quot;key&quot;:&quot;RUNTIME&quot;,&quot;value&quot;:&quot;DBUTILS&quot;},{&quot;key&quot;:&quot;UUAA&quot;,&quot;value&quot;:&quot;%%UUAA&quot;},{&quot;key&quot;:&quot;SH_EXEC_PARAMETERS&quot;,&quot;value&quot;:&quot;%%DBTYPE %%JNDI %%UUAA %%TABLE %%MODE %%FILE %%ENV&quot;},{&quot;key&quot;:&quot;SH_FILE_NAME&quot;,&quot;value&quot;:&quot;%%SHELL&quot;},{&quot;key&quot;:&quot;ALTERNATIVE_IMAGE&quot;,&quot;value&quot;:&quot;%%ALTERNATIVEIMAGE&quot;}]}" />
             <VARIABLE NAME="%%UCM-ACCOUNT" VALUE="PE_PYLLS_DE" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <ON STMT="*" CODE="NOTOK">
                 <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="Job de borrado Intervinientes" ATTACH_SYSOUT="D" />
             </ON>
@@ -386,7 +386,7 @@
             <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;gf_cutoff_date&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
             <INCOND NAME="PKSANVP0GD3-TO-PKSANNP0GD1" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PKSANVP0GD4-TO-PKSANNP0GD1" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANNP0GD1-TO-PKSANCP0GD6" ODATE="ODAT" SIGN="+" />
             <OUTCOND NAME="PKSANNP0GD1-TO-PKSANCP0GD5" ODATE="ODAT" SIGN="+" />
             <OUTCOND NAME="PKSANNP0GD1-TO-PKSANCP0GD7" ODATE="ODAT" SIGN="+" />
@@ -406,7 +406,7 @@
             <INCOND NAME="PSANCP0I29-TO-PKSANCP0P03" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PSANCP0H17-TO-PKSANCP0P03" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PSANVP0012-TO-PKSANCP0P03" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PSANCP0H41-TO-PKSANCP0P03" ODATE="ODAT" AND_OR="-" />
             <OUTCOND NAME="PSANCP0067-TO-PKSANCP0P03" ODATE="ODAT" AND_OR="-" />
             <OUTCOND NAME="PSANCP0I29-TO-PKSANCP0P03" ODATE="ODAT" AND_OR="-" />
@@ -426,7 +426,7 @@
             <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;gf_cutoff_date&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />											 
             <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecucion favor de alertar al aplicativo" DAYSOFFSET="0" />
             <INCOND NAME="PKSANCP0P03-TO-PKSANVP0GD9" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANCP0P03-TO-PKSANVP0GD9" ODATE="ODAT" SIGN="-" />
             <OUTCOND NAME="PKSANVP0GD9-TO-PKSANCP0GD5" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="NOTOK">
@@ -440,7 +440,7 @@
             <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;gf_cutoff_date&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
             <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecucion favor de alertar al aplicativo" DAYSOFFSET="0" />
             <INCOND NAME="PKSANCP0P03-TO-PKSANVP0GD7" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANVP0GD7-TO-PKSANCP0GD5" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="OK">
                 <DOFORCEJOB TABLE_NAME="CR-PEKSANDIA-K02" NAME="PKSANCP0CR1" ODATE="ODAT" REMOTE="N" />
@@ -458,7 +458,7 @@
             <INCOND NAME="PKSANVP0GD7-TO-PKSANCP0GD5" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PKSANVP0GD9-TO-PKSANCP0GD5" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PKSANNP0GD1-TO-PKSANCP0GD5" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANCP0GD5-TO-PKSANVP0GDA" ODATE="ODAT" SIGN="+" />
             <OUTCOND NAME="PKSANNP0GD1-TO-PKSANCP0GD5" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
@@ -473,7 +473,7 @@
             <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecucion favor de alertar al aplicativo" DAYSOFFSET="0" />
             <INCOND NAME="PKSANVP0GDA-TO-PKSANCP0GD6" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PKSANNP0GD1-TO-PKSANCP0GD6" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANNP0GD1-TO-PKSANCP0GD6" ODATE="ODAT" SIGN="-" />
             <OUTCOND NAME="PKSANCP0GD6-TO-PKSANDP0GD2" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="NOTOK">
@@ -487,7 +487,7 @@
             <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;gf_cutoff_date&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
             <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecucion favor de alertar al aplicativo" DAYSOFFSET="0" />
             <INCOND NAME="PKSANCP0GD5-TO-PKSANVP0GDA" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANVP0GDA-TO-PKSANCP0GD6" ODATE="ODAT" SIGN="+" />
             <OUTCOND NAME="PKSANVP0GDA-TO-PKSANVP4GD3" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="NOTOK">
@@ -501,7 +501,7 @@
             <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;gf_cutoff_date&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
             <INCOND NAME="PKSANDP0GD1-TO-PKSANDP0GD2" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PKSANCP0GD6-TO-PKSANDP0GD2" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <ON STMT="*" CODE="NOTOK">
                 <DOMAIL URGENCY="U" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="KSAN Ejecución fallida del job %%JOBNAME - Odate %%$ODATE" MESSAGE="0069Ha fallado el proceso %%JOBNAME con Odate %%$ODATE, favor de validar." ATTACH_SYSOUT="Y" />
             </ON>
@@ -537,7 +537,7 @@
             <INCOND NAME="PKSANVP4GD1-TO-PKSANDP4GD1" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PKSANVP4GD2-TO-PKSANDP4GD1" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PKSANVP4GD3-TO-PKSANDP4GD1" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANDP0GDE-TO-PKSANVP0GD1" ODATE="ODAT" SIGN="+" />
             <OUTCOND NAME="PKSANDP0GDE-TO-PKSANVP0GD2" ODATE="ODAT" SIGN="+" />
             <OUTCOND NAME="PKSANVP4GD1-TO-PKSANDP4GD1" ODATE="ODAT" SIGN="-" />
