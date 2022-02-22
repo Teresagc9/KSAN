@@ -130,7 +130,7 @@
             <VARIABLE NAME="%%UCM-APXJOB" VALUE="KSANJ002-01-ZZ" />
             <VARIABLE NAME="%%UCM-ACCOUNT" VALUE="PE_PYLLS_DE" />
             <INCOND NAME="PKSANTP0GD2-TO-PKSANCP0GX2" ODATE="ODAT" AND_OR="A" />
-            <QUANTITATIVE NAME="INITNOLINEA" QUANT="1" ONFAIL="R" ONOK="R" />
+            <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANCP0GX2-TO-PKSANTP0GD4" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="NOTOK">
                 <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="KSAN Ejecución fallida del job %%JOBNAME - Odate %%$ODATE" MESSAGE="0069Ha fallado el proceso %%JOBNAME con Odate %%$ODATE, favor de validar." ATTACH_SYSOUT="Y" />
