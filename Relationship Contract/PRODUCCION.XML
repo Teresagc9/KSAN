@@ -1,0 +1,105 @@
+<JOB JOBISN="0" APPLICATION="KSAN-PE-DATIO" SUB_APPLICATION="KSAN-MASTER-CCR" JOBNAME="PKSANCP0P03" DESCRIPTION="Proceso Tablon relationcontract Delta" CREATED_BY="XP65177" RUN_AS="sentry" CRITICAL="0" TASKTYPE="Command" CYCLIC="0" NODEID="PE-SENTRY-00" INTERVAL="00001M" CMDLINE="/opt/datio/sentry-pe/dataproc_sentry.py %%SENTRY_JOB %%SENTRY_OPT '%%SENTRY_PARM'" CONFIRM="0" DAYSCAL="PEHABILE" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XP63567" CREATION_DATE="20220218" CREATION_TIME="004321" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="OS" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="DAJO" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEKSANDIA-K02">
+            <VARIABLE NAME="%%PARM1" VALUE="%%$OYEAR-%%OMONTH-%%ODAY" />
+            <VARIABLE NAME="%%SENTRY_JOB" VALUE="-ns pe.ksan.app-id-13224.dev -jn ksan-pe-spk-inm-relnshpcontractlcl-01 -o %%ORDERID" />
+            <VARIABLE NAME="%%SENTRY_OPT" VALUE="-b" />
+            <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;ODATE&quot;:&quot;%%PARM1&quot;,&quot;ENV&quot;:&quot;work&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
+            <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecucion favor de alertar al aplicativo" DAYSOFFSET="0" />
+            <INCOND NAME="PSANCP0H41-TO-PKSANCP0P03" ODATE="ODAT" AND_OR="A" />
+            <INCOND NAME="PSANCP0067-TO-PKSANCP0P03" ODATE="ODAT" AND_OR="A" />
+            <INCOND NAME="PSANCP0I29-TO-PKSANCP0P03" ODATE="ODAT" AND_OR="A" />
+            <INCOND NAME="PSANCP0H17-TO-PKSANCP0P03" ODATE="ODAT" AND_OR="A" />
+            <INCOND NAME="PSANVP0012-TO-PKSANCP0P03" ODATE="ODAT" AND_OR="A" />
+            <<QUANTITATIVE NAME="DATIO_SENTRY_PE" NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <OUTCOND NAME="PSANCP0H41-TO-PKSANCP0P03" ODATE="ODAT" SIGN="-" />
+            <OUTCOND NAME="PSANCP0067-TO-PKSANCP0P03" ODATE="ODAT" SIGN="-" />
+            <OUTCOND NAME="PSANCP0I29-TO-PKSANCP0P03" ODATE="ODAT" SIGN="-" />
+            <OUTCOND NAME="PSANCP0H17-TO-PKSANCP0P03" ODATE="ODAT" SIGN="-" />
+            <OUTCOND NAME="PSANVP0012-TO-PKSANCP0P03" ODATE="ODAT" SIGN="-" />
+            <OUTCOND NAME="PKSANCP0P03-TO-PKSANVP0GD7" ODATE="ODAT" SIGN="+" />
+            <OUTCOND NAME="PKSANCP0P03-TO-PKSANVP0GD9" ODATE="ODAT" SIGN="+" />
+            <ON STMT="*" CODE="NOTOK">
+                <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="Cancelado PKSANCP0P03 - ksan-pe-spk-inm-relnshpcontractlcl-01 - %%$ODATE" MESSAGE="0049Error en la ejecución del Job proceso cancelado." ATTACH_SYSOUT="Y" />
+            </ON>
+        </JOB>
+
+        <JOB JOBISN="0" APPLICATION="KSAN-PE-DATIO" SUB_APPLICATION="KSAN-HAMMURABI-CCR" JOBNAME="PKSANVP0GD9" DESCRIPTION="Hammurabi sobre el fichero local de relaciones" CREATED_BY="XP65177" RUN_AS="sentry" CRITICAL="0" TASKTYPE="Command" CYCLIC="0" NODEID="PE-SENTRY-00" INTERVAL="00001M" CMDLINE="/opt/datio/sentry-pe/dataproc_sentry.py %%SENTRY_JOB %%SENTRY_OPT '%%SENTRY_PARM'" CONFIRM="0" DAYSCAL="PEHABILE" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XP63567" CREATION_DATE="20220217" CREATION_TIME="174927" CHANGE_USERID="XP63567" CHANGE_DATE="20220218" CHANGE_TIME="004321" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="OS" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="2" VERSION_HOST="DAJO" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEKSANDIA-K02">
+            <VARIABLE NAME="%%PARM1" VALUE="%%$OYEAR-%%OMONTH-%%ODAY" />													
+            <VARIABLE NAME="%%SENTRY_JOB" VALUE="-ns pe.ksan.app-id-13224.dev -jn ksan-gl-spk-qlt-contractrelationshiplcl-01 -o %%ORDERID" />
+            <VARIABLE NAME="%%SENTRY_OPT" VALUE="-b" />
+            <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;gf_cutoff_date&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />											 
+            <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecucion favor de alertar al aplicativo" DAYSOFFSET="0" />
+            <INCOND NAME="PKSANCP0P03-TO-PKSANVP0GD9" ODATE="ODAT" AND_OR="A" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <OUTCOND NAME="PKSANCP0P03-TO-PKSANVP0GD9" ODATE="ODAT" SIGN="-" />
+            <OUTCOND NAME="PKSANVP0GD9-TO-PKSANCP0GD5" ODATE="ODAT" SIGN="+" />
+            <ON STMT="*" CODE="NOTOK">
+                <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="Cancelado PKSANVP0CR4 - ksan-gl-spk-qlt-contractrelationshiplcl-01 - %%$ODATE" MESSAGE="0049Error en la ejecución del Job proceso cancelado." ATTACH_SYSOUT="Y" />
+            </ON>
+        </JOB>
+
+         <JOB JOBISN="0" APPLICATION="KSAN-PE-DATIO" SUB_APPLICATION="KSAN-HAMMURABI-CCR" JOBNAME="PKSANVP0GD7" DESCRIPTION="Hammurabi sobre el fichero local de relaciones" CREATED_BY="XP65177" RUN_AS="sentry" CRITICAL="0" TASKTYPE="Command" CYCLIC="0" NODEID="PE-SENTRY-00" INTERVAL="00001M" CMDLINE="/opt/datio/sentry-pe/dataproc_sentry.py %%SENTRY_JOB %%SENTRY_OPT '%%SENTRY_PARM'" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XP63567" CREATION_DATE="20220218" CREATION_TIME="004321" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="OS" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="WVMCCRXA06" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEKSANDIA-K02">
+            <VARIABLE NAME="%%PARM1" VALUE="%%$OYEAR-%%OMONTH-%%ODAY" />
+            <VARIABLE NAME="%%SENTRY_JOB" VALUE="-ns pe.ksan.app-id-13224.dev -jn ksan-pe-spk-qlt-contractrelationshiplcl-01 -o %%ORDERID" />
+            <VARIABLE NAME="%%SENTRY_OPT" VALUE="-b" />
+            <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;DATE&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
+            <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecucion favor de alertar al aplicativo" DAYSOFFSET="0" />
+            <INCOND NAME="PKSANCP0P03-TO-PKSANVP0GD7" ODATE="ODAT" AND_OR="A" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <OUTCOND NAME="PKSANCP0P03-TO-PKSANVP0GD7" ODATE="ODAT" SIGN="-" />
+            <OUTCOND NAME="PKSANVP0GD7-TO-PKSANCP0GD5" ODATE="ODAT" SIGN="+" />
+            <ON STMT="*" CODE="NOTOK">
+                <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="Cancelado PKSANVP0GD7 - ksan-pe-spk-qlt-contractrelationshiplcl-01 - %%$ODATE" MESSAGE="0049Error en la ejecución del Job proceso cancelado." ATTACH_SYSOUT="Y" />
+            </ON>
+        </JOB>
+
+        <JOB JOBISN="0" APPLICATION="KSAN-PE-DATIO" SUB_APPLICATION="KSAN-MASTER-CCR" JOBNAME="PKSANCP0GD5" DESCRIPTION="Ingesta de relaciones al master global" CREATED_BY="XP65177" RUN_AS="sentry" CRITICAL="0" TASKTYPE="Command" CYCLIC="0" NODEID="PE-SENTRY-00" INTERVAL="00001M" CMDLINE="/opt/datio/sentry-pe/dataproc_sentry.py %%SENTRY_JOB %%SENTRY_OPT '%%SENTRY_PARM'" CONFIRM="0" DAYSCAL="PEHABILE" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XP63567" CREATION_DATE="20220218" CREATION_TIME="004321" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="OS" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="DAJO" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEKSANDIA-K02">
+            <VARIABLE NAME="%%PARM1" VALUE="%%$OYEAR-%%OMONTH-%%ODAY" />
+            <VARIABLE NAME="%%SENTRY_JOB" VALUE="-ns pe.ksan.app-id-13224.dev -jn ksan-gl-spk-inm-contractrelationship-01 -o %%ORDERID" />
+            <VARIABLE NAME="%%SENTRY_OPT" VALUE="-b" />
+            <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;gf_cutoff_date&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
+            <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecucion favor de alertar al aplicativo" DAYSOFFSET="0" />
+            <INCOND NAME="PKSANVP0GD7-TO-PKSANCP0GD5" ODATE="ODAT" AND_OR="A" />
+            <INCOND NAME="PKSANVP0GD9-TO-PKSANCP0GD5" ODATE="ODAT" AND_OR="A" />
+            <INCOND NAME="PKSANNP0GD1-TO-PKSANCP0GD5" ODATE="ODAT" AND_OR="A" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <OUTCOND NAME="PKSANCP0GD5-TO-PKSANVP0GDA" ODATE="ODAT" SIGN="+" />
+            <OUTCOND NAME="PKSANCP0GD5-TO-PKSANVP4GD1" ODATE="ODAT" SIGN="+" />
+            <OUTCOND NAME="PKSANVP0GD7-TO-PKSANCP0GD5" ODATE="ODAT" SIGN="-" />
+            <OUTCOND NAME="PKSANVP0GD9-TO-PKSANCP0GD5" ODATE="ODAT" SIGN="-" />
+            <OUTCOND NAME="PKSANNP0GD1-TO-PKSANCP0GD5" ODATE="ODAT" SIGN="-" />
+            <ON STMT="*" CODE="NOTOK">
+                <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="Cancelado PKSANCP0GD5 - ksan-gl-spk-inm-contractrelationship-01 - %%$ODATE" MESSAGE="0049Error en la ejecución del Job proceso cancelado." ATTACH_SYSOUT="Y" />
+            </ON>
+        </JOB>
+
+        <JOB JOBISN="0" APPLICATION="KSAN-PE-DATIO" SUB_APPLICATION="KSAN-HAMMURABI-CCR" JOBNAME="PKSANVP0GDA" DESCRIPTION="Proceso Hammurabi sobre el fichero consolidado de relaciones" CREATED_BY="XP65177" RUN_AS="sentry" CRITICAL="0" TASKTYPE="Command" CYCLIC="0" NODEID="PE-SENTRY-00" INTERVAL="00001M" CMDLINE="/opt/datio/sentry-pe/dataproc_sentry.py %%SENTRY_JOB %%SENTRY_OPT '%%SENTRY_PARM'" CONFIRM="0" DAYSCAL="PEHABILE" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XP63567" CREATION_DATE="20220218" CREATION_TIME="004321" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="OS" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="DAJO" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEKSANDIA-K02">
+            <VARIABLE NAME="%%PARM1" VALUE="%%$OYEAR.-%%OMONTH.-%%ODAY" />
+            <VARIABLE NAME="%%SENTRY_JOB" VALUE="-ns pe.ksan.app-id-13224.dev -jn ksan-gl-spk-qlt-contractrelationship-01 -o %%ORDERID" />
+            <VARIABLE NAME="%%SENTRY_OPT" VALUE="-b" />
+            <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;gf_cutoff_date&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
+            <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecucion favor de alertar al aplicativo" DAYSOFFSET="0" />
+            <INCOND NAME="PKSANCP0GD5-TO-PKSANVP0GDA" ODATE="ODAT" AND_OR="A" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <OUTCOND NAME="PKSANVP0GDA-TO-PKSANCP0GD6" ODATE="ODAT" SIGN="+" />
+            <OUTCOND NAME="PKSANCP0GD5-TO-PKSANVP0GDA" ODATE="ODAT" SIGN="-" />
+            <ON STMT="*" CODE="NOTOK">
+                <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="Cancelado PKSANVP0GDA - ksan-gl-spk-qlt-contractrelationship-01 - %%$ODATE" MESSAGE="0049Error en la ejecución del Job proceso cancelado." ATTACH_SYSOUT="Y" />
+            </ON>
+        </JOB>
+
+        <JOB JOBISN="0" APPLICATION="KSAN-PE-DATIO" SUB_APPLICATION="KSAN-MASTER-CCR" JOBNAME="PKSANCP0GD6" DESCRIPTION="Genera ficheros OUT a contractrelationship" CREATED_BY="XP65177" RUN_AS="sentry" CRITICAL="0" TASKTYPE="Command" CYCLIC="0" NODEID="PE-SENTRY-00" INTERVAL="00001M" CMDLINE="{&quot;env&quot;:{&quot;gf_cutoff_date&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" CONFIRM="0" DAYSCAL="PEHABILE" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XP63567" CREATION_DATE="20220218" CREATION_TIME="004321" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="OS" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="DAJO" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEKSANDIA-K02">
+            <VARIABLE NAME="%%PARM1" VALUE="%%$OYEAR-%%OMONTH-%%ODAY" />
+            <VARIABLE NAME="%%SENTRY_JOB" VALUE="-ns pe.ksan.app-id-13224.dev -jn ksan-gl-spk-out-contractrelationship-01 -o %%ORDERID" />
+            <VARIABLE NAME="%%SENTRY_OPT" VALUE="-b" />
+            <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;gf_cutoff_date&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
+            <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecucion favor de alertar al aplicativo" DAYSOFFSET="0" />
+            <INCOND NAME="PKSANVP0GDA-TO-PKSANCP0GD6" ODATE="ODAT" AND_OR="A" />
+            <INCOND NAME="PKSANNP0GD1-TO-PKSANCP0GD6" ODATE="ODAT" AND_OR="A" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <OUTCOND NAME="PKSANVP0GDA-TO-PKSANCP0GD6" ODATE="ODAT" SIGN="-" />
+            <OUTCOND NAME="PKSANNP0GD1-TO-PKSANCP0GD6" ODATE="ODAT" SIGN="-" />
+            <OUTCOND NAME="PKSANCP0GD6-TO-PKSANDP0GD2" ODATE="ODAT" SIGN="+" />
+            <ON STMT="*" CODE="NOTOK">
+                <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="Cancelado PKSANCP0CR2 - ksan-gl-spk-out-contractrelationship-01 - %%$ODATE" MESSAGE="0049Error en la ejecución del Job proceso cancelado." ATTACH_SYSOUT="Y" />
+            </ON>
+        </JOB>
