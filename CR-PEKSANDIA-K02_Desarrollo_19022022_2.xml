@@ -104,6 +104,8 @@
             <INCOND NAME="PKSANTD0GD4-TO-PKSANCD0GD8" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PKSANND0GD1-TO-PKSANCD0GD8" ODATE="ODAT" AND_OR="A" />
             <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <OUTCOND NAME="PKSANTD0GD4-TO-PKSANCD0GD8" ODATE="ODAT" SIGN="-" />
+            <OUTCOND NAME="PKSANND0GD1-TO-PKSANCD0GD8" ODATE="ODAT" SIGN="-" />
             <OUTCOND NAME="PKSANCD0GD8-TO-PKSANDD0GD1" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="NOTOK">
                 <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="KSAN Ejecución fallida del job %%JOBNAME - Odate %%$ODATE" MESSAGE="0069Ha fallado el proceso %%JOBNAME con Odate %%$ODATE, favor de validar." ATTACH_SYSOUT="Y" />
@@ -131,6 +133,7 @@
             <VARIABLE NAME="%%UCM-ACCOUNT" VALUE="PE_PYLLS_DE" />
             <INCOND NAME="PKSANTD0GD2-TO-PKSANCD0GX2" ODATE="ODAT" AND_OR="A" />
             <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <OUTCOND NAME="PKSANTD0GD2-TO-PKSANCD0GX2" ODATE="ODAT" SIGN="-" />
             <OUTCOND NAME="PKSANCD0GX2-TO-PKSANTD0GD4" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="NOTOK">
                 <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="KSAN Ejecución fallida del job %%JOBNAME - Odate %%$ODATE" MESSAGE="0069Ha fallado el proceso %%JOBNAME con Odate %%$ODATE, favor de validar." ATTACH_SYSOUT="Y" />
@@ -144,6 +147,7 @@
             <VARIABLE NAME="%%PARM2" VALUE="/fichtemcomp/datent/%%ENTORNO/" />
             <VARIABLE NAME="%%PARM3" VALUE="/fichtemcomp/datent/%%ENTORNO/PKSAN_D01_%%$ODATE._INTERVENT_*.csv" />
             <INCOND NAME="PKSANCD0GD7-TO-PKSANTD0GD2" ODATE="ODAT" AND_OR="A" />
+            <OUTCOND NAME="PKSANCD0GD7-TO-PKSANTD0GD2" ODATE="ODAT" SIGN="-" />
             <OUTCOND NAME="PKSANTD0GD2-TO-PKSANCD0GX2" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="NOTOK">
                 <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="KSAN Ejecución fallida del job %%JOBNAME - Odate %%$ODATE" MESSAGE="0069Ha fallado el proceso %%JOBNAME con Odate %%$ODATE, favor de validar." ATTACH_SYSOUT="Y" />
@@ -153,6 +157,7 @@
             <VARIABLE NAME="%%PARM1" VALUE="%%$ODATE" />
             <INCOND NAME="PKSANCD0GX2-TO-PKSANTD0GD4" ODATE="ODAT" AND_OR="A" />
             <OUTCOND NAME="PKSANTD0GD4-TO-PKSANCD0GD8" ODATE="ODAT" SIGN="+" />
+            <OUTCOND NAME="PKSANCD0GX2-TO-PKSANTD0GD4" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
                 <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="KSAN Error en la ejecución del Job %%JOBNAME - %%$ODATE" ATTACH_SYSOUT="D" />
             </ON>
@@ -259,6 +264,7 @@
             <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANCD0GD7-TO-PKSANDD0GD1" ODATE="ODAT" SIGN="+" />
             <OUTCOND NAME="PKSANND0GD1-TO-PKSANCD0GD7" ODATE="ODAT" SIGN="-" />
+            <OUTCOND NAME="PKSANTD0GD3-TO-PKSANCD0GD7" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
                 <DOMAIL URGENCY="U" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" CC_DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="KSAN Ejecución fallida del job %%JOBNAME - Odate %%$ODATE" MESSAGE="0069Ha fallado el proceso %%JOBNAME con Odate %%$ODATE, favor de validar." ATTACH_SYSOUT="Y" />
             </ON>
@@ -359,6 +365,7 @@
             <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANDD0GD1-TO-PKSANDD0GD2" ODATE="ODAT" SIGN="+" />
             <OUTCOND NAME="PKSANCD0GD8-TO-PKSANDD0GD1" ODATE="ODAT" SIGN="-" />
+            <OUTCOND NAME="PKSANCD0GD7-TO-PKSANDD0GD1" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
                 <DOMAIL URGENCY="U" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="KSAN Ejecución fallida del job %%JOBNAME - Odate %%$ODATE" MESSAGE="0069Ha fallado el proceso %%JOBNAME con Odate %%$ODATE, favor de validar." ATTACH_SYSOUT="Y" />
             </ON>
@@ -509,6 +516,8 @@
             <INCOND NAME="PKSANDD0GD1-TO-PKSANDD0GD2" ODATE="ODAT" AND_OR="A" />
             <INCOND NAME="PKSANCD0GD6-TO-PKSANDD0GD2" ODATE="ODAT" AND_OR="A" />
             <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <OUTCOND NAME="PKSANDD0GD1-TO-PKSANDD0GD2" ODATE="ODAT" SIGN="-" />
+            <OUTCOND NAME="PKSANCD0GD6-TO-PKSANDD0GD2" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
                 <DOMAIL URGENCY="U" DEST="david.torres.perales.contractor@bbva.com;teresa.gomez.carlos.contractor@bbva.com;carlos.palomino.ruiz@bbva.com" SUBJECT="KSAN Ejecución fallida del job %%JOBNAME - Odate %%$ODATE" MESSAGE="0069Ha fallado el proceso %%JOBNAME con Odate %%$ODATE, favor de validar." ATTACH_SYSOUT="Y" />
             </ON>
