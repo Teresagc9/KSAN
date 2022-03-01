@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--Exported at 26-11-2021 14:20:43-->
+<!--Exported at 28-02-2022 17:02:57-->
 <DEFTABLE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Folder.xsd">
     <FOLDER DATACENTER="CTM_CTRLMCCR" VERSION="900" PLATFORM="UNIX" FOLDER_NAME="CR-PEBTQDIA-T02" MODIFIED="False" LAST_UPLOAD="20200917164346UTC" FOLDER_ORDER_METHOD="SYSTEM" REAL_FOLDER_ID="0" TYPE="1" USED_BY_CODE="0">
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-RAW-CCR" JOBNAME="PBTQCP0A01" DESCRIPTION="H_PE_PEDTLGO_D_${?DATE}.dat" CREATED_BY="xp62168" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="xp62168" CREATION_DATE="20211028" CREATION_TIME="213504" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="WVMCCRXA06" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -22,7 +22,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0P01" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;fabrica-ingestas-minsait.group@bbva.com" SUBJECT="Cancelado PBTQCP0A01 - pbtq-pe-krb-inr-peoplelogchangesp-01 - %%$ODATE" MESSAGE="0038Job execution error, process canceled." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;fabrica-ingestas-minsait.group@bbva.com" SUBJECT="Cancelado PBTQCP0A01 - pbtq-pe-krb-inr-peoplelogchangesp-01 - %%$ODATE" MESSAGE="0038Job execution error, process canceled." ATTACH_SYSOUT="D" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-MASTER-CCR" JOBNAME="PBTQCP0P01" DESCRIPTION="t_ppeh_people_log_changes" CREATED_BY="xp62168" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="xp62168" CREATION_DATE="20211028" CREATION_TIME="213504" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="WVMCCRXA06" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -132,7 +132,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0I07" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado %%JOBNAME - %%$ODATE" MESSAGE="Proceso Cancelado" ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado %%JOBNAME - %%$ODATE" MESSAGE="0017Proceso Cancelado" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="INGESTA-CCR" JOBNAME="PBTQCP0I01" DESCRIPTION="Raw_H_XG_ITDTJER_T_&quot;${?DATE}&quot;.dat" CREATED_BY="P017830" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" DAYSCAL="PEHABILE" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20190804" CREATION_TIME="102450" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="2" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -152,7 +152,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0I02" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado %%JOBNAME - %%$ODATE" MESSAGE="Proceso Cancelado" ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado %%JOBNAME - %%$ODATE" MESSAGE="0017Proceso Cancelado" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="INGESTA-CCR" JOBNAME="PBTQCP0I02" DESCRIPTION="Raw_t_pith_master_balance_ffss" CREATED_BY="P017830" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20190804" CREATION_TIME="102450" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="2" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -175,7 +175,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0I04" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado %%JOBNAME - %%$ODATE" MESSAGE="Proceso Cancelado" ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado %%JOBNAME - %%$ODATE" MESSAGE="0017Proceso Cancelado" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="INGESTA-CCR" JOBNAME="PBTQCP0I07" DESCRIPTION="Raw_t_pith_mstr_balance_ffss_detail" CREATED_BY="P017830" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20190804" CREATION_TIME="102450" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="2" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -198,7 +198,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0I09" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado %%JOBNAME - %%$ODATE" MESSAGE="Proceso Cancelado" ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado %%JOBNAME - %%$ODATE" MESSAGE="0017Proceso Cancelado" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="INGESTA-CCR" JOBNAME="PBTQCP0I09" DESCRIPTION="Master-t_pbtq_mstr_balance_ffss_detail" CREATED_BY="P017830" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20190804" CREATION_TIME="102450" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="2" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -220,7 +220,7 @@
             <OUTCOND NAME="PBTQCP0I09-TO-PKSAGCP4003" ODATE="ODAT" SIGN="+" />
             <OUTCOND NAME="PBTQCP0I09-TO-PMORCP4059" ODATE="STAT" SIGN="+" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado %%JOBNAME - %%$ODATE" MESSAGE="Proceso Cancelado" ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado %%JOBNAME - %%$ODATE" MESSAGE="0017Proceso Cancelado" ATTACH_SYSOUT="Y" />
             </ON>
             <ON STMT="*" CODE="OK">
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0I10" ODATE="ODAT" REMOTE="N" />
@@ -239,7 +239,7 @@
             <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PBTQCP0I07-TO-PBTQCP0I08" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado %%JOBNAME - %%$ODATE" MESSAGE="Proceso Cancelado" ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado %%JOBNAME - %%$ODATE" MESSAGE="0017Proceso Cancelado" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="INGESTA-CCR" JOBNAME="PBTQCP0I10" DESCRIPTION="Master-t_pbtq_mstr_balance_ffss_detail" CREATED_BY="P017830" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20190804" CREATION_TIME="102450" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="3" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -257,7 +257,7 @@
             <OUTCOND NAME="PBTQCP0I09-TO-PBTQCP0I10" ODATE="ODAT" SIGN="-" />
             <OUTCOND NAME="PBTQCP0I10-TO-PBTQCP0044" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado %%JOBNAME - %%$ODATE" MESSAGE="Proceso Cancelado" ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado %%JOBNAME - %%$ODATE" MESSAGE="0017Proceso Cancelado" ATTACH_SYSOUT="Y" />
             </ON>
             <ON STMT="*" CODE="OK">
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0044" ODATE="ODAT" REMOTE="N" />
@@ -278,7 +278,7 @@
             <OUTCOND NAME="PBTQCP0I04-TO-PBTQCP0I05" ODATE="ODAT" SIGN="+" />
             <OUTCOND NAME="PBTQCP0I04-TO-PKBTQCP4002" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado %%JOBNAME - %%$ODATE" MESSAGE="Proceso Cancelado" ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado %%JOBNAME - %%$ODATE" MESSAGE="0017Proceso Cancelado" ATTACH_SYSOUT="Y" />
             </ON>
             <ON STMT="*" CODE="OK">
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0I05" ODATE="ODAT" REMOTE="N" />
@@ -299,7 +299,7 @@
             <OUTCOND NAME="PBTQCP0I04-TO-PBTQCP0I05" ODATE="ODAT" SIGN="-" />
             <OUTCOND NAME="PBTQCP0I05-TO-PBTQCP0043" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado %%JOBNAME - %%$ODATE" MESSAGE="Proceso Cancelado" ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado %%JOBNAME - %%$ODATE" MESSAGE="0017Proceso Cancelado" ATTACH_SYSOUT="Y" />
             </ON>
             <ON STMT="*" CODE="OK">
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0043" ODATE="ODAT" REMOTE="N" />
@@ -318,7 +318,7 @@
             <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PBTQCP0I02-TO-PBTQCP0I03" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado %%JOBNAME - %%$ODATE" MESSAGE="Proceso Cancelado" ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado %%JOBNAME - %%$ODATE" MESSAGE="0017Proceso Cancelado" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="DATIO-TRANSFER-CCR" MEMNAME="RX_PBTQCD0002.sh" JOBNAME="PBTQTP0001" DESCRIPTION="ConnectDirect para file D_EX_FXCNTR_D_&quot;${?DATE}&quot;.dat" CREATED_BY="P027196" RUN_AS="ndm36" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxft00" INTERVAL="00001M" MEMLIB="/NDM36/cdunix/progs/" CONFIRM="0" DAYSCAL="PEHABILE" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" TIMEFROM="0500" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20191016" CREATION_TIME="160101" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="OS" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="3" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -457,7 +457,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0A02" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - HAMMURABI-STAGING-refounded - %%$ODATE" MESSAGE="0087Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-spk-qlt-refoundedcustomerss-01" ATTACH_SYSOUT="D" />
+                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - HAMMURABI-STAGING-refounded - %%$ODATE" MESSAGE="0087Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-spk-qlt-refoundedcustomerss-01" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="DATIO-PFM-CCR" JOBNAME="PBTQCP0A02" DESCRIPTION="[Avro] - t_ppeh_refounded_customers&#xD;&#xA;" CREATED_BY="P026026" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="0" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="MB44693" CREATION_DATE="20191213" CREATION_TIME="095126" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="2" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -576,7 +576,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0I19" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com;angel.palomino@bbva.com;ndod.data.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - pbtq-pe-spk-qlt-basicpeopledatas-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job %%JOBNAME." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com;angel.palomino@bbva.com;ndod.data.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - pbtq-pe-spk-qlt-basicpeopledatas-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="DATIO-AVRO-CCR" JOBNAME="PBTQCP0I19" DESCRIPTION="[Avro] - t_ppeh_basic_people_data" CREATED_BY="P024858" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200316" CREATION_TIME="130932" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="3" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -600,7 +600,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0063" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com;angel.palomino@bbva.com;ndod.data.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - pbtq-pe-krb-inr-basicpeopledatap-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job %%JOBNAME." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com;angel.palomino@bbva.com;ndod.data.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - pbtq-pe-krb-inr-basicpeopledatap-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="DATIO-INGESTA-CCR" JOBNAME="PBTQCP0H13" DESCRIPTION="[Hammurabi] - t_ppeh_basic_people_data" CREATED_BY="P024858" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200316" CREATION_TIME="130932" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="3" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -618,7 +618,7 @@
             <OUTCOND NAME="PBTQCP0I19-TO-PBTQCP0H13" ODATE="ODAT" SIGN="-" />
             <OUTCOND NAME="PBTQCP0H13-TO-PKMOLCP0P10" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com;angel.palomino@bbva.com;ndod.data.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - pbtq-pe-spk-qlt-basicpeopledatar-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job %%JOBNAME." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com;angel.palomino@bbva.com;ndod.data.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - pbtq-pe-spk-qlt-basicpeopledatar-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="DATIO-INGESTA-CCR" JOBNAME="PBTQCP0H14" DESCRIPTION="[Hammurabi] - H_PE_PEDT008_TOT_${?DATE}.dat" CREATED_BY="P026026" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" DAYSCAL="PEHABILE" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200316" CREATION_TIME="130932" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="2" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -638,7 +638,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0I20" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com" CC_DEST="alienware.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - HAMMURABI-STAGING-refounded - %%$ODATE" MESSAGE="0087Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-spk-qlt-customercontrelss-01" ATTACH_SYSOUT="D" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com" CC_DEST="alienware.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - HAMMURABI-STAGING-refounded - %%$ODATE" MESSAGE="0085Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-spk-qlt-customercontrelss-01" ATTACH_SYSOUT="D" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="DATIO-AVRO-CCR" JOBNAME="PBTQCP0I20" DESCRIPTION="[Avro] - t_ppeh_customer_cont_rels" CREATED_BY="P026026" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200316" CREATION_TIME="130932" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="2" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -659,7 +659,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0I21" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com" CC_DEST="alienware.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - AVRO-INGESTA-refounded - %%$ODATE" MESSAGE="0087Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-krb-inr-customercontrelsp-01" ATTACH_SYSOUT="D" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com" CC_DEST="alienware.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - AVRO-INGESTA-refounded - %%$ODATE" MESSAGE="0085Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-krb-inr-customercontrelsp-01" ATTACH_SYSOUT="D" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="DATIO-INGESTA-CCR" JOBNAME="PBTQCP0H15" DESCRIPTION="[Hammurabi] - t_ppeh_customer_cont_rels" CREATED_BY="P026026" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200316" CREATION_TIME="130932" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="3" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -676,7 +676,7 @@
             <OUTCOND NAME="PBTQCP0I20-TO-PBTQCP0H15" ODATE="ODAT" SIGN="-" />
             <OUTCOND NAME="PBTQCP0H15-TO-PKMOLCP0P10" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com" CC_DEST="alienware.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - HAMMURABI-AVRO-refounded - %%$ODATE" MESSAGE="0087Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-spk-qlt-customercontrelsr-01" ATTACH_SYSOUT="D" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com" CC_DEST="alienware.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - HAMMURABI-AVRO-refounded - %%$ODATE" MESSAGE="0085Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-spk-qlt-customercontrelsr-01" ATTACH_SYSOUT="D" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-MASTER-CCR" JOBNAME="PBTQCP0I21" DESCRIPTION="MASTER - t_ppeh_customer_cont_rels" CREATED_BY="P026026" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200316" CREATION_TIME="130932" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="4" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -708,7 +708,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEKSANDIA-K02" NAME="PKSANCP0L03" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com" CC_DEST="alienware.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - PARQUET-INGESTA-refounded - %%$ODATE" MESSAGE="0087Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-krb-inm-customercontrelsp-01" ATTACH_SYSOUT="D" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com" CC_DEST="alienware.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - PARQUET-INGESTA-refounded - %%$ODATE" MESSAGE="0085Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-krb-inm-customercontrelsp-01" ATTACH_SYSOUT="D" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="DATIO-INGESTA-CCR" JOBNAME="PBTQCP0H16" DESCRIPTION="[Hammurabi] - t_pbtq_customer_cont_rels" CREATED_BY="P026026" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200316" CREATION_TIME="130932" CHANGE_USERID="XP96625" CHANGE_DATE="20210524" CHANGE_TIME="124520" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="3" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -733,7 +733,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0017" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com;arce-data-hub-pe.group@bbva.com;lourdes.diaz.sanchez.contractor@bbva.com;freedom-data.group@bbva.com" CC_DEST="alienware.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - HAMMURABI-PARQUET-refounded - %%$ODATE" MESSAGE="0087Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-spk-qlt-customercontrelsm-01" ATTACH_SYSOUT="D" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com;arce-data-hub-pe.group@bbva.com;lourdes.diaz.sanchez.contractor@bbva.com;freedom-data.group@bbva.com" CC_DEST="alienware.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - HAMMURABI-PARQUET-refounded - %%$ODATE" MESSAGE="0085Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-spk-qlt-customercontrelsm-01" ATTACH_SYSOUT="D" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="DATIO-INGESTA-CCR" JOBNAME="PBTQCP0H17" DESCRIPTION="[Hammurabi] - H_PE_PEDT011_TOT_" CREATED_BY="P026026" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" DAYSCAL="PEHABILE" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200316" CREATION_TIME="130932" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="2" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -753,7 +753,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0I22" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com" CC_DEST="alienware.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - HAMMURABI-STAGING-refounded - %%$ODATE" MESSAGE="0087Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-spk-qlt-customercontrelss-01" ATTACH_SYSOUT="D" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com" CC_DEST="alienware.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - HAMMURABI-STAGING-refounded - %%$ODATE" MESSAGE="0085Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-spk-qlt-customercontrelss-01" ATTACH_SYSOUT="D" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="DATIO-AVRO-CCR" JOBNAME="PBTQCP0I22" DESCRIPTION="[Avro] - t_ppeh_cust_reserved_information" CREATED_BY="P026026" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200316" CREATION_TIME="130932" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="2" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -774,7 +774,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0I23" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com" CC_DEST="alienware.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - AVRO-INGESTA-refounded - %%$ODATE" MESSAGE="0087Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-krb-inr-customercontrelsp-01" ATTACH_SYSOUT="D" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com" CC_DEST="alienware.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - AVRO-INGESTA-refounded - %%$ODATE" MESSAGE="0085Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-krb-inr-customercontrelsp-01" ATTACH_SYSOUT="D" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="DATIO-INGESTA-CCR" JOBNAME="PBTQCP0H18" DESCRIPTION="[Hammurabi] - t_ppeh_cust_reserved_information" CREATED_BY="P026026" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200316" CREATION_TIME="130932" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="2" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -790,7 +790,7 @@
             <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PBTQCP0I22-TO-PBTQCP0H18" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com" CC_DEST="alienware.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - HAMMURABI-AVRO-refounded - %%$ODATE" MESSAGE="0087Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-spk-qlt-customercontrelsr-01" ATTACH_SYSOUT="D" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com" CC_DEST="alienware.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - HAMMURABI-AVRO-refounded - %%$ODATE" MESSAGE="0085Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-spk-qlt-customercontrelsr-01" ATTACH_SYSOUT="D" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-MASTER-CCR" JOBNAME="PBTQCP0I23" DESCRIPTION="MASTER - t_pbtq_cust_reserved_information" CREATED_BY="P026026" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200316" CREATION_TIME="130932" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="2" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -817,7 +817,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0H19" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com" CC_DEST="alienware.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - PARQUET-INGESTA-refounded - %%$ODATE" MESSAGE="0087Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-krb-inm-customercontrelsp-01" ATTACH_SYSOUT="D" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com" CC_DEST="alienware.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - PARQUET-INGESTA-refounded - %%$ODATE" MESSAGE="0085Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-krb-inm-customercontrelsp-01" ATTACH_SYSOUT="D" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="DATIO-INGESTA-CCR" JOBNAME="PBTQCP0H19" DESCRIPTION="[Hammurabi] - t_pbtq_cust_reserved_information" CREATED_BY="P026026" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200316" CREATION_TIME="130932" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="3" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -838,7 +838,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0018" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com" SUBJECT="Cancelado PBTQCP0H19 - pbtq-pe-spk-qlt-custreservedinformationm-01 - %%$ODATE" MESSAGE="0049Error en la ejecución del Job proceso cancelado." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com" SUBJECT="Cancelado PBTQCP0H19 - pbtq-pe-spk-qlt-custreservedinformationm-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-HAMMURABI-CCR" JOBNAME="PBTQCP0002" DESCRIPTION="HAMMURABI - H_PE_PEDT002_T_${?DATE}.dat" CREATED_BY="P027931" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" DAYSCAL="PEHABILE" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200331" CREATION_TIME="133135" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="2" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -858,7 +858,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0003" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0002 - pbtq-pe-spk-qlt-additionalcustomerinfos-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQCP0002." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0002 - pbtq-pe-spk-qlt-additionalcustomerinfos-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-RAW-CCR" JOBNAME="PBTQCP0003" DESCRIPTION="RAW - t_ppeh_additional_customer_info" CREATED_BY="P027931" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200331" CREATION_TIME="133135" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="3" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -878,7 +878,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0004" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0003 - pbtq-pe-krb-inr-additionalcustomerinfop-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQCP0003." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0003 - pbtq-pe-krb-inr-additionalcustomerinfop-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-HAMMURABI-CCR" JOBNAME="PBTQCP0004" DESCRIPTION="HAMMURABI - t_ppeh_additional_customer_info" CREATED_BY="P027931" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200331" CREATION_TIME="133135" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="3" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -894,7 +894,7 @@
             <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PBTQCP0003-TO-PBTQCP0004" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0004 - pbtq-pe-spk-qlt-additionalcustomerinfor-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQCP0004." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0004 - pbtq-pe-spk-qlt-additionalcustomerinfor-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-HDFS-CCR" JOBNAME="PBTQCP0005" DESCRIPTION="REMOVE (HDFS) - H_PE_PEDT002_T_${?DATE}.dat" CREATED_BY="P027931" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200331" CREATION_TIME="133135" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="3" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -911,7 +911,7 @@
             <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PBTQCP0015-TO-PBTQCP0005" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0005 - pbtq-pe-dfs-rmv-hdfs-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQCP0005." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0005 - pbtq-pe-dfs-rmv-hdfs-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-HAMMURABI-CCR" JOBNAME="PBTQCP0006" DESCRIPTION="HAMMURABI - H_PE_PEDT094_T_${?DATE}.dat" CREATED_BY="P027931" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" DAYSCAL="PEHABILE" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200331" CREATION_TIME="133135" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="2" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -931,7 +931,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0007" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0006 - pbtq-pe-spk-qlt-customereconomicinfos-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQCP0006." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0006 - pbtq-pe-spk-qlt-customereconomicinfos-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-RAW-CCR" JOBNAME="PBTQCP0007" DESCRIPTION="RAW - t_ppeh_customer_economic_info" CREATED_BY="P027931" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200331" CREATION_TIME="133135" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="3" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -951,7 +951,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0008" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0007 - pbtq-pe-krb-inr-customereconomicinfop-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQCP0007." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0007 - pbtq-pe-krb-inr-customereconomicinfop-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-HAMMURABI-CCR" JOBNAME="PBTQCP0008" DESCRIPTION="HAMMURABI - t_ppeh_customer_economic_info" CREATED_BY="P027931" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200331" CREATION_TIME="133135" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="3" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -967,7 +967,7 @@
             <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PBTQCP0007-TO-PBTQCP0008" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0008 - pbtq-pe-spk-qlt-customereconomicinfor-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQCP0008." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0008 - pbtq-pe-spk-qlt-customereconomicinfor-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-HDFS-CCR" JOBNAME="PBTQCP0009" DESCRIPTION="REMOVE (HDFS) - H_PE_PEDT094_T_${?DATE}.dat" CREATED_BY="P027931" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200331" CREATION_TIME="133135" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="3" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -984,7 +984,7 @@
             <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PBTQCP0015-TO-PBTQCP0009" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0009 - pbtq-pe-dfs-rmv-hdfs-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQCP0009." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0009 - pbtq-pe-dfs-rmv-hdfs-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-HAMMURABI-CCR" JOBNAME="PBTQCP0010" DESCRIPTION="HAMMURABI - H_PE_PEDT005_T_${?DATE}.dat" CREATED_BY="P027931" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" DAYSCAL="PEHABILE" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200331" CREATION_TIME="133135" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="2" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -1004,7 +1004,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0011" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0010 - pbtq-pe-spk-qlt-custsocioeconomicprofls-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQCP0010." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0010 - pbtq-pe-spk-qlt-custsocioeconomicprofls-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-RAW-CCR" JOBNAME="PBTQCP0011" DESCRIPTION="RAW - t_ppeh_cust_socioeconomic_profl" CREATED_BY="P027931" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200331" CREATION_TIME="133135" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="3" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -1024,7 +1024,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0012" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0011 - pbtq-pe-krb-inr-custsocioeconomicproflp-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQCP0011." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0011 - pbtq-pe-krb-inr-custsocioeconomicproflp-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-HAMMURABI-CCR" JOBNAME="PBTQCP0012" DESCRIPTION="HAMMURABI - t_ppeh_cust_socioeconomic_profl" CREATED_BY="P027931" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200331" CREATION_TIME="133135" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="3" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -1040,7 +1040,7 @@
             <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PBTQCP0011-TO-PBTQCP0012" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0012 - pbtq-pe-spk-qlt-custsocioeconomicproflr-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQCP0012." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0012 - pbtq-pe-spk-qlt-custsocioeconomicproflr-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-HDFS-CCR" JOBNAME="PBTQCP0013" DESCRIPTION="REMOVE (HDFS) - H_PE_PEDT005_T_${?DATE}.dat" CREATED_BY="P027931" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200331" CREATION_TIME="133135" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="3" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -1057,7 +1057,7 @@
             <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PBTQCP0015-TO-PBTQCP0013" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0013 - pbtq-pe-dfs-rmv-hdfs-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQCP0013." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="incidencia-malla-datio-peru.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0013 - pbtq-pe-dfs-rmv-hdfs-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-MASTER-CCR" JOBNAME="PBTQCP0014" DESCRIPTION="MASTER - t_pbtq_people_daily_information" CREATED_BY="XP95813" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200508" CREATION_TIME="123309" CHANGE_USERID="XMZ0643" CHANGE_DATE="20200914" CHANGE_TIME="150234" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="4" VERSION_HOST="DESKTOP-7EMI8QG" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -1100,10 +1100,10 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0015" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;incidencia-malla-datio-peru.group@bbva.com;arce-data-hub-pe.group@bbva.com" SUBJECT="Cancelado PBTQCP0014 - pbtq-pe-krb-inm-peopledailyinformationp-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQCP0014." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;incidencia-malla-datio-peru.group@bbva.com;arce-data-hub-pe.group@bbva.com" SUBJECT="Cancelado PBTQCP0014 - pbtq-pe-krb-inm-peopledailyinformationp-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
-        <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-HAMMURABI-CCR" JOBNAME="PBTQCP0015" DESCRIPTION="HAMMURABI - t_pbtq_people_daily_information" CREATED_BY="XP95813" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200508" CREATION_TIME="123309" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="DESKTOP-Q2NGA99" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
+        <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-HAMMURABI-CCR-RC" JOBNAME="PBTQCP0015" DESCRIPTION="HAMMURABI - t_pbtq_people_daily_information" CREATED_BY="XP95813" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200508" CREATION_TIME="123309" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="DESKTOP-Q2NGA99" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
             <VARIABLE NAME="%%PARM1" VALUE="%%$ODATE" />
             <VARIABLE NAME="%%PARM2" VALUE="%%$OYEAR-%%OMONTH-%%ODAY" />
             <VARIABLE NAME="%%PARM3" VALUE="%%$CALCDATE %%$ODATE +1 PEHABILE" />
@@ -1135,7 +1135,10 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0009" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;incidencia-malla-datio-peru.group@bbva.com;arce-data-hub-pe.group@bbva.com;lourdes.diaz.sanchez.contractor@bbva.com;freedom-data.group@bbva.com" SUBJECT="Cancelado PBTQCP0015 - pbtq-pe-spk-qlt-peopledailyinformationm-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQCP0015." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="U" DEST="soporte_red_datamart.group@bbva.com;incidencia-malla-datio-peru.group@bbva.com;arce-data-hub-pe.group@bbva.com;lourdes.diaz.sanchez.contractor@bbva.com;freedom-data.group@bbva.com;frenteunicoprodperu@bbva.com" SUBJECT="RUTA CRITICA ANP - Cancelado PBTQCP0015 - pbtq-pe-spk-qlt-peopledailyinformationm-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
+            </ON>
+			<ON STMT="*" CODE="NOTOK">
+                <DOSHOUT URGENCY="U" MESSAGE="Ruta Crítica Escalar a Aplicativo" DEST="EM" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-HDFS-CCR" JOBNAME="PBTQCP0016" DESCRIPTION="REMOVE (HDFS) - H_PE_PEDT001_TOT_${?DATE}.dat" CREATED_BY="XP95813" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200508" CREATION_TIME="123309" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="DESKTOP-Q2NGA99" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -1152,7 +1155,7 @@
             <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PBTQCP0015-TO-PBTQCP0016" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;incidencia-malla-datio-peru.group@bbva.com;arce-data-hub-pe.group@bbva.com" SUBJECT="Cancelado PBTQCP0016 - pbtq-pe-dfs-rmv-hdfs-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQCP0016." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;incidencia-malla-datio-peru.group@bbva.com;arce-data-hub-pe.group@bbva.com" SUBJECT="Cancelado PBTQCP0016 - pbtq-pe-dfs-rmv-hdfs-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-HDFS-CCR" JOBNAME="PBTQCP0017" DESCRIPTION="REMOVE (HDFS) - H_PE_PEDT008_TOT_${?DATE}.dat" CREATED_BY="XP95813" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200603" CREATION_TIME="182841" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="DESKTOP-Q2NGA99" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -1170,7 +1173,7 @@
             <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PBTQCP0H16-TO-PBTQCP0017" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;incidencia-malla-datio-peru.group@bbva.com;arce-data-hub-pe.group@bbva.com" SUBJECT="Cancelado PBTQCP0017 - pbtq-pe-dfs-rmv-hdfs-01 - %%$ODATE" MESSAGE="0042Error en la ejecución del Job PBTQCP0017." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;incidencia-malla-datio-peru.group@bbva.com;arce-data-hub-pe.group@bbva.com" SUBJECT="Cancelado PBTQCP0017 - pbtq-pe-dfs-rmv-hdfs-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-HDFS-CCR" JOBNAME="PBTQCP0018" DESCRIPTION="REMOVE (HDFS) - REMOVE (HDFS) - HH_PE_PEDT011_TOT_${?DATE}.dat" CREATED_BY="P027360" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200624" CREATION_TIME="164541" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="DESKTOP-Q2NGA99" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -1721,7 +1724,7 @@
             <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PBTQCP0I05-TO-PBTQCP0043" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado PBTQCP0043 - pbtq-pe-dfs-rmv-hdfs-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQCP0043." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado PBTQCP0043 - pbtq-pe-dfs-rmv-hdfs-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-HDFS-CCR" JOBNAME="PBTQCP0044" DESCRIPTION="REMOVE (HDFS) - H_XG_ITDTBVE_T_${?DATE}.dat" CREATED_BY="XP98460" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200914" CREATION_TIME="150234" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="114330" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="2" VERSION_HOST="DESKTOP-G9ADR0B" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -1738,7 +1741,7 @@
             <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PBTQCP0I10-TO-PBTQCP0044" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado PBTQCP0044 - pbtq-pe-dfs-rmv-hdfs-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQCP0044." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;ricardoandre.sulca@bbva.com;leonard.aguirre.contractor@bbva.com" SUBJECT="Cancelado PBTQCP0044 - pbtq-pe-dfs-rmv-hdfs-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-HAMMURABI-CCR" JOBNAME="PBTQCP0045" DESCRIPTION="HAMMURABI - HAMMURABI - H_PE_PEDT090_T_${?DATE}.dat" CREATED_BY="XP95747" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" DAYSCAL="PEHABILE" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XP95747" CREATION_DATE="20201002" CREATION_TIME="163043" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="WVMCCRXA06" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -1898,7 +1901,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0052" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="apagado-deuda-reliability.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQVP0001 - pbtq-pe-spk-qlt-customermarkrelss-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQVP0001." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="apagado-deuda-reliability.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQVP0001 - pbtq-pe-spk-qlt-customermarkrelss-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-RAW-CCR" JOBNAME="PBTQCP0052" DESCRIPTION="RAW - t_ppeh_customer_mark_rels" CREATED_BY="XP61488" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XP61488" CREATION_DATE="20210111" CREATION_TIME="153430" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="WVMCCRXA06" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -1920,7 +1923,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0053" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="apagado-deuda-reliability.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0052 - pbtq-pe-krb-inr-customermarkrelsp-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQCP0052." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="apagado-deuda-reliability.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0052 - pbtq-pe-krb-inr-customermarkrelsp-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-HAMMURABI-CCR" JOBNAME="PBTQVP0002" DESCRIPTION="HAMMURABI - t_ppeh_customer_mark_rels" CREATED_BY="XP61488" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XP61488" CREATION_DATE="20210111" CREATION_TIME="153430" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="WVMCCRXA06" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -1937,7 +1940,7 @@
             <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PBTQCP0052-TO-PBTQVP0002" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="apagado-deuda-reliability.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQVP0002 - pbtq-pe-spk-qlt-customermarkrelsr-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQVP0002." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="apagado-deuda-reliability.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQVP0002 - pbtq-pe-spk-qlt-customermarkrelsr-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-MASTER-CCR" JOBNAME="PBTQCP0053" DESCRIPTION="MASTER - t_pbtq_customer_mark_rels" CREATED_BY="XP61488" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XP61488" CREATION_DATE="20210111" CREATION_TIME="153430" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="WVMCCRXA06" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -1958,7 +1961,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQVP0003" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="apagado-deuda-reliability.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0053 - pbtq-pe-krb-inm-customermarkrelsp-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQCP0053." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="apagado-deuda-reliability.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQCP0053 - pbtq-pe-krb-inm-customermarkrelsp-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-HAMMURABI-CCR" JOBNAME="PBTQVP0003" DESCRIPTION="HAMMURABI - t_pbtq_customer_mark_rels" CREATED_BY="XP61488" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XP61488" CREATION_DATE="20210111" CREATION_TIME="153430" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="WVMCCRXA06" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -1979,7 +1982,7 @@
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQDP0001" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="apagado-deuda-reliability.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQVP0003 - pbtq-pe-spk-qlt-customermarkrelsm-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQVP0003." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="apagado-deuda-reliability.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQVP0003 - pbtq-pe-spk-qlt-customermarkrelsm-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-HDFS-CCR" JOBNAME="PBTQDP0001" DESCRIPTION="REMOVE (HDFS) - h_pe_pedtmpc_t_${?DATE}.txt" CREATED_BY="XP61488" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XP61488" CREATION_DATE="20210111" CREATION_TIME="153430" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="WVMCCRXA06" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
@@ -1997,7 +2000,7 @@
             <QUANTITATIVE NAME="APX_DATIO_AI_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PBTQVP0003-TO-PBTQDP0001" ODATE="ODAT" SIGN="-" />
             <ON STMT="*" CODE="NOTOK">
-                <DOMAIL URGENCY="R" DEST="apagado-deuda-reliability.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQDP0001 - pbtq-pe-dfs-rmv-hdfs-01 - %%$ODATE" MESSAGE="0042 - Error en la ejecución del Job PBTQDP0001." ATTACH_SYSOUT="Y" />
+                <DOMAIL URGENCY="R" DEST="apagado-deuda-reliability.group@bbva.com;soporte_red_datamart.group@bbva.com" SUBJECT="Cancelado PBTQDP0001 - pbtq-pe-dfs-rmv-hdfs-01 - %%$ODATE" MESSAGE="0043 - Error en la ejecución del Job %%JOBNAME" ATTACH_SYSOUT="Y" />
             </ON>
         </JOB>
         <JOB JOBISN="0" APPLICATION="BTQ-PE-DATIO" SUB_APPLICATION="BTQ-HAMMURABI-CCR" JOBNAME="PBTQVP0004" DESCRIPTION="HAMMURABI - H_PE_PEDETMA_T_${?DATE}.dat" CREATED_BY="XP62334" RUN_AS="PE_DAAS" CRITICAL="0" TASKTYPE="Job" CYCLIC="0" NODEID="lcvppeaxai00" INTERVAL="00001M" CONFIRM="0" DAYSCAL="PEHABILE" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XP62334" CREATION_DATE="20210430" CREATION_TIME="150427" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="DATIO" APPL_FORM="DATIO" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="WVMCCRXA06" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PEBTQDIA-T02">
