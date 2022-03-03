@@ -705,8 +705,7 @@
             <OUTCOND NAME="PBTQCP0I21-TO-PKSANCP0L03" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="OK">
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCP0H16" ODATE="ODAT" REMOTE="N" />
-                <DOFORCEJOB TABLE_NAME="CR-PEKSANDIA-K02" NAME="PKSANCP0L03" ODATE="ODAT" REMOTE="N" />
-            </ON>
+		    </ON>
             <ON STMT="*" CODE="NOTOK">
                 <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;karla.garcia.mideiros@bbva.com" CC_DEST="alienware.group@bbva.com" SUBJECT="Cancelado %%JOBNAME - PARQUET-INGESTA-refounded - %%$ODATE" MESSAGE="0085Error en la ejecucion del Job %%JOBNAME DAAS_JOB pbtq-pe-krb-inm-customercontrelsp-01" ATTACH_SYSOUT="D" />
             </ON>
