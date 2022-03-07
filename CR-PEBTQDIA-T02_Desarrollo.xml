@@ -28,7 +28,6 @@
             <OUTCOND NAME="PBTQCD0I21-TO-PKSANCD0L03" ODATE="ODAT" SIGN="+" />
             <ON STMT="*" CODE="OK">
                 <DOFORCEJOB TABLE_NAME="CR-PEBTQDIA-T02" NAME="PBTQCD0H16" ODATE="ODAT" REMOTE="N" />
-                <DOFORCEJOB TABLE_NAME="CR-PEKSANDIA-K02" NAME="PKSANCD0L03" ODATE="ODAT" REMOTE="N" />
             </ON>
             <ON STMT="*" CODE="NOTOK">
                 <DOMAIL URGENCY="R" DEST="david.torres.perales.contractor@bbva.com" SUBJECT="Error en la ejecución del Job %%JOBNAME - %%$ODATE" MESSAGE="0000" ATTACH_SYSOUT="Y" />
