@@ -99,7 +99,6 @@
             <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;gf_cutoff_date&quot;:&quot;%%PARM1&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
             <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecución, alertar al aplicativo" DAYSOFFSET="0" />
             <INCOND NAME="PKSANCP0GD2-TO-PKSANVP0GD4" ODATE="ODAT" AND_OR="A" />
-            <INCOND NAME="PKSANCP0H03-TO-PKSANVP0GD4" ODATE="ODAT" AND_OR="A" />
             <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
             <OUTCOND NAME="PKSANCP0GD2-TO-PKSANVP0GD4" ODATE="ODAT" SIGN="-" />
             <OUTCOND NAME="PKSANCP0H03-TO-PKSANVP0GD4" ODATE="ODAT" SIGN="-" />
