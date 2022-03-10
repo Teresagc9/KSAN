@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Exported at 01-03-2022 05:14:02-->
+<DEFTABLE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Folder.xsd">
+    <FOLDER DATACENTER="Ctrlm_Desarrollo" VERSION="900" PLATFORM="UNIX" FOLDER_NAME="CR-PESANDIA-T02" LAST_UPLOAD="20200917181734UTC" FOLDER_ORDER_METHOD="SYSTEM" REAL_FOLDER_ID="0" TYPE="1" USED_BY_CODE="0">
+        <JOB JOBISN="0" APPLICATION="SAN-PE-DATIO" SUB_APPLICATION="SAN-HAMMURABI-CCR" JOBNAME="PSANVD0012" DESCRIPTION="HAMMURABI - t_psan_credit_debit_card_master" CREATED_BY="XP95621" RUN_AS="sentry" CRITICAL="0" TASKTYPE="Command" CYCLIC="0" NODEID="PE-SENTRY-00" INTERVAL="00001M" CMDLINE="/opt/datio/sentry-pe/dataproc_sentry.py %%SENTRY_JOB %%SENTRY_OPT '%%SENTRY_PARM'" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XP95621" CREATION_DATE="20210202" CREATION_TIME="100211" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="OS" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="WVMCCRXA06" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PESANDIA-T02">
+            <VARIABLE NAME="%%PARM1" VALUE="%%$ODATE" />
+            <VARIABLE NAME="%%PARM2" VALUE="%%SUBSTR %%PARM1 1 4" />
+            <VARIABLE NAME="%%PARM3" VALUE="%%SUBSTR %%PARM1 5 2" />
+            <VARIABLE NAME="%%PARM4" VALUE="%%SUBSTR %%PARM1 7 2" />
+            <VARIABLE NAME="%%PARM5" VALUE="%%PARM2-%%PARM3-%%PARM4" />
+            <VARIABLE NAME="%%SENTRY_JOB" VALUE="-ns pe.psan.app-id-20876.dev -jn psan-pe-spk-qlt-creditdebitcardmasterm-01 -o %%ORDERID" />
+            <VARIABLE NAME="%%SENTRY_OPT" VALUE="-b" />
+            <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;DATE&quot;:&quot;%%PARM1&quot;,&quot;REPROCESS_DATE&quot;:&quot;%%PARM5&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
+            <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecucion favor de alertar al aplicativo" DAYSOFFSET="0" />
+            <INCOND NAME="PSANCD0217-TO-PSANVD0012" ODATE="ODAT" AND_OR="A" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <OUTCOND NAME="PSANCD0217-TO-PSANVD0012" ODATE="ODAT" SIGN="-" />
+            <OUTCOND NAME="PSANVD0012-TO-PKSANCD0P01" ODATE="ODAT" SIGN="+" />
+            <OUTCOND NAME="PSANVD0012-TO-PKSANCD0P03" ODATE="ODAT" SIGN="+" />
+            <ON STMT="*" CODE="NOTOK">
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;cdd-br-skeleton-pe.group@bbva.com" SUBJECT="Cancelado PSANVD0012 - psan-pe-spk-qlt-creditdebitcardmasterm-01 - %%$ODATE" MESSAGE="0049Error en la ejecución del Job proceso cancelado." ATTACH_SYSOUT="Y" />
+            </ON>
+        </JOB>
+        <JOB JOBISN="0" APPLICATION="SAN-PE-DATIO" SUB_APPLICATION="SAN-HAMMURABI-CCR" JOBNAME="PSANVD0117" DESCRIPTION="HAMMURABI - t_psan_sold_secd_portfolio_param" CREATED_BY="XP62915" RUN_AS="sentry" CRITICAL="0" TASKTYPE="Command" CYCLIC="0" NODEID="PE-SENTRY-00" INTERVAL="00001M" CMDLINE="/opt/datio/sentry-pe/dataproc_sentry.py %%SENTRY_JOB %%SENTRY_OPT '%%SENTRY_PARM'" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XP62915" CREATION_DATE="20211017" CREATION_TIME="222822" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="OS" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" VERSION_OPCODE="N" IS_CURRENT_VERSION="Y" VERSION_SERIAL="1" VERSION_HOST="WVMCCRXA06" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PESANDIA-T02">
+            <VARIABLE NAME="%%PARM1" VALUE="%%$ODATE" />
+            <VARIABLE NAME="%%PARM2" VALUE="%%$OYEAR-%%OMONTH-%%ODAY" />
+            <VARIABLE NAME="%%SENTRY_JOB" VALUE="-ns pe.psan.app-id-20876.dev -jn psan-pe-spk-qlt-soldsecdportfolioparamm-01 -o %%ORDERID" />
+            <VARIABLE NAME="%%SENTRY_OPT" VALUE="-b" />
+            <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;DATE&quot;:&quot;%%PARM1&quot;,&quot;REPROCESS_DATE&quot;:&quot;%%PARM2&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
+            <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecucion favor de alertar al aplicativo" DAYSOFFSET="0" />
+            <INCOND NAME="PSANCD0290-TO-PSANVD0117" ODATE="ODAT" AND_OR="A" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <OUTCOND NAME="PSANCD0290-TO-PSANVD0117" ODATE="ODAT" SIGN="-" />
+            <OUTCOND NAME="PSANVD0117-TO-PSANDD0043" ODATE="ODAT" SIGN="+" />
+            <OUTCOND NAME="PSANVD0117-TO-PKSANCD0P01" ODATE="ODAT" SIGN="+" />
+            <ON STMT="*" CODE="OK">
+                <DOFORCEJOB TABLE_NAME="CR-PESANDIA-T02" NAME="PSANDD0043" ODATE="ODAT" REMOTE="N" />
+            </ON>
+            <ON STMT="*" CODE="NOTOK">
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com;advisors-scrum.group@bbva.com" SUBJECT="Cancelado PSANVD0117 - psan-pe-spk-qlt-soldsecdportfolioparamm-01 - %%$ODATE" MESSAGE="0049Error en la ejecución del Job proceso cancelado." ATTACH_SYSOUT="Y" />
+            </ON>
+        </JOB>
+        <JOB JOBISN="0" APPLICATION="SAN-PE-DATIO" SUB_APPLICATION="SAN-MASTER-CCR" JOBNAME="PSANCD0I31" DESCRIPTION="MASTER - t_psan_daily_loan_master" CREATED_BY="P024858" RUN_AS="sentry" CRITICAL="0" TASKTYPE="Command" CYCLIC="0" NODEID="PE-SENTRY-00" INTERVAL="00001M" CMDLINE="/opt/datio/sentry-pe/dataproc_sentry.py %%SENTRY_JOB %%SENTRY_OPT '%%SENTRY_PARM'" CONFIRM="0" RETRO="0" MAXWAIT="3" MAXRERUN="0" AUTOARCH="1" MAXDAYS="0" MAXRUNS="0" JAN="1" FEB="1" MAR="1" APR="1" MAY="1" JUN="1" JUL="1" AUG="1" SEP="1" OCT="1" NOV="1" DEC="1" DAYS_AND_OR="O" SHIFT="Ignore Job" SHIFTNUM="+00" SYSDB="1" IND_CYCLIC="S" CREATION_USER="XMZ0643" CREATION_DATE="20200220" CREATION_TIME="151431" CHANGE_USERID="XM26335" CHANGE_DATE="20200917" CHANGE_TIME="131522" RULE_BASED_CALENDAR_RELATIONSHIP="O" APPL_TYPE="OS" CM_VER="N/A" MULTY_AGENT="N" USE_INSTREAM_JCL="N" CYCLIC_TOLERANCE="0" CYCLIC_TYPE="C" PARENT_FOLDER="CR-PESANDIA-T02">
+            <VARIABLE NAME="%%PARM1" VALUE="%%$ODATE" />
+            <VARIABLE NAME="%%PARM2" VALUE="%%$OYEAR-%%OMONTH-%%ODAY" />
+            <VARIABLE NAME="%%SENTRY_JOB" VALUE="-ns pe.psan.app-id-20876.dev -jn psan-pe-krb-inm-dailyloanmasterp-01 -o %%ORDERID" />
+            <VARIABLE NAME="%%SENTRY_OPT" VALUE="-b" />
+            <VARIABLE NAME="%%SENTRY_PARM" VALUE="{&quot;env&quot;:{&quot;DATE&quot;:&quot;%%PARM1&quot;,&quot;REPROCESS_DATE&quot;:&quot;%%PARM2&quot;,&quot;CONTROLM_JOB_ID&quot;:&quot;%%JOBNAME&quot;,&quot;CONTROLM_JOB_FLOW&quot;:&quot;%%SCHEDTAB&quot;}}" />
+            <SHOUT WHEN="EXECTIME" TIME="&gt;060" URGENCY="R" DEST="EM" MESSAGE="Excedio el tiempo de ejecucion favor de alertar al aplicativo" DAYSOFFSET="0" />
+            <INCOND NAME="PSANCD0I30-TO-PSANCD0I31" ODATE="ODAT" AND_OR="A" />
+            <QUANTITATIVE NAME="DATIO_SENTRY_PE" QUANT="1" ONFAIL="R" ONOK="R" />
+            <OUTCOND NAME="PSANCD0I30-TO-PSANCD0I31" ODATE="ODAT" SIGN="-" />
+            <OUTCOND NAME="PSANCD0I31-TO-PSANCD0H41" ODATE="ODAT" SIGN="+" />
+            <OUTCOND NAME="PSANCD0I31-TO-PDEOCD0H09" ODATE="ODAT" SIGN="+" />
+            <OUTCOND NAME="PSANCD0I31-TO-PKMFICD4004" ODATE="ODAT" SIGN="+" />
+            <OUTCOND NAME="PSANCD0I31-TO-PKMOLCD0P09" ODATE="ODAT" SIGN="+" />
+            <OUTCOND NAME="PSANCD0I31-TO-PSAGCD4016" ODATE="ODAT" SIGN="+" />
+            <OUTCOND NAME="PSANCD0I31-TO-PKPFMCD0004" ODATE="ODAT" SIGN="+" />
+            <ON STMT="*" CODE="OK">
+                <DOFORCEJOB TABLE_NAME="CR-PESANDIA-T02" NAME="PSANCD0H41" ODATE="ODAT" REMOTE="N" />
+            </ON>
+            <ON STMT="*" CODE="NOTOK">
+                <DOMAIL URGENCY="R" DEST="soporte_red_datamart.group@bbva.com" CC_DEST="karla.garcia.mideiros@bbva.com;angel.palomino@bbva.com;jesus.moran.atuncar@bbva.com;selene.siles.contractor@bbva.com" SUBJECT="Cancelado PSANCD0I31 - psan-pe-spk-inm-dailyloanmasterp-01 - %%$ODATE" ATTACH_SYSOUT="Y" />
+            </ON>
+        </JOB>
+    </FOLDER>
+</DEFTABLE>
